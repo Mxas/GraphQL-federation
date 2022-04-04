@@ -5,3 +5,5 @@ server:
 
 voyager:
   enabled: true
+logging:
+  level.root: debug

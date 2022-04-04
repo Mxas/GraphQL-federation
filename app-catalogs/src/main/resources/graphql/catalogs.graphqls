@@ -1,6 +1,7 @@
 
 type Query {
     getCatalog(id: Int!): Catalog
+    findAll: [Catalog]
 }
 
 type Catalog @key(fields: "id") {

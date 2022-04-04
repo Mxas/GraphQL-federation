@@ -1,7 +1,9 @@
 package eu.mktraining.cataolgs.catalogs.repository;
 
 import eu.mktraining.cataolgs.catalogs.model.Catalog;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import javax.annotation.PostConstruct;
@@ -22,5 +24,9 @@ public class CatalogRepository {
 
 	public Optional<Catalog> get(int id) {
 		return Optional.ofNullable(store.get(id));
+	}
+
+	public List<Catalog> findAll() {
+		return new ArrayList<>(store.values());
 	}
 }
