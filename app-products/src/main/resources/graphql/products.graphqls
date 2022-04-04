@@ -1,0 +1,15 @@
+type Query {
+    getProduct(id: Int!): Product
+}
+
+type Product  @key(fields: "id") {
+    id: Int
+    name: String
+    model: String
+    catalogId: Int
+}
+
+type Catalog @key(fields: "id") @extends {
+    id: Int @external
+    products: [Product]
+}

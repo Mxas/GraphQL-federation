@@ -1,0 +1,7 @@
+
+server:
+  servlet.contextPath: /products
+  port: 8081
+
+voyager:
+  enabled: true

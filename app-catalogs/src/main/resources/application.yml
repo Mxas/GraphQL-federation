@@ -1,0 +1,7 @@
+
+server:
+  servlet.contextPath: /catalogs
+  port: 8082
+
+voyager:
+  enabled: true

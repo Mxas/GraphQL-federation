@@ -1,0 +1,14 @@
+
+type Query {
+    getCatalog(id: Int!): Catalog
+}
+
+type Catalog @key(fields: "id") {
+    id: Int
+    name: String
+}
+
+#type Product @key(field: "catalogId") @extends {
+#    catalogId: Int @external
+#    catalog: Catalog
+#}
